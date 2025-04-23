@@ -1,0 +1,89 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --pixel-size: 2px;
+}
+
+body {
+  font-family: 'Press Start 2P', system-ui;
+  background: #1a1a1a;
+  color: #ffffff;
+  image-rendering: pixelated;
+}
+
+.pixel-border {
+  border-style: solid;
+  border-width: var(--pixel-size);
+  border-color: #ffffff;
+  box-shadow: 
+    var(--pixel-size) var(--pixel-size) 0 0 #000000,
+    calc(var(--pixel-size) * -1) calc(var(--pixel-size) * -1) 0 0 #808080;
+}
+
+.pixel-button {
+  @apply px-4 py-2 bg-blue-600 text-white;
+  border-style: solid;
+  border-width: var(--pixel-size);
+  border-color: #4a9eff;
+  box-shadow: 
+    var(--pixel-size) var(--pixel-size) 0 0 #003366,
+    calc(var(--pixel-size) * -1) calc(var(--pixel-size) * -1) 0 0 #66b3ff;
+  transition: all 0.1s;
+}
+
+.pixel-button:active {
+  transform: translate(2px, 2px);
+  box-shadow: none;
+}
+
+.room {
+  @apply relative w-full min-h-screen p-8;
+  background-size: 32px 32px;
+  background-image: 
+    linear-gradient(to right, #222222 1px, transparent 1px),
+    linear-gradient(to bottom, #222222 1px, transparent 1px);
+}
+
+.character {
+  @apply absolute;
+  width: 32px;
+  height: 48px;
+  background: url('https://i.imgur.com/7TvXnQK.png') no-repeat;
+  image-rendering: pixelated;
+}
+
+.visitor-counter {
+  @apply fixed top-4 right-4 bg-black/80 p-4 pixel-border text-xs z-50;
+}
+
+.dialog-box {
+  @apply fixed bottom-4 left-1/2 -translate-x-1/2 w-[80%] max-w-2xl bg-black/90 p-6 pixel-border;
+}
+
+.screen {
+  @apply relative bg-black/80 p-4 pixel-border cursor-pointer;
+  transition: all 0.2s;
+}
+
+.screen:hover {
+  transform: scale(1.02);
+  filter: brightness(1.2);
+}
+
+.bookshelf {
+  @apply grid grid-cols-1 md:grid-cols-3 gap-4;
+}
+
+.book {
+  @apply bg-[#8b4513] p-4 pixel-border cursor-pointer;
+  height: 120px;
+}
+
+.contact-form input,
+.contact-form textarea {
+  @apply w-full bg-black/50 p-3 pixel-border mb-4;
+}
