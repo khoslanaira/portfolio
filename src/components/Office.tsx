@@ -1,5 +1,5 @@
-import React from 'react';
 import { motion } from 'framer-motion';
+import React from 'react';
 
 interface OfficeProps {
   onNavigate: (room: string) => void;
@@ -87,7 +87,7 @@ const Office: React.FC<OfficeProps> = ({ onNavigate }) => {
               {[
                 { name: "Quick Learner", icon: "📚", desc: "+20% Learning Speed" },
                 { name: "Creative Mind", icon: "🎨", desc: "+15% Innovation" },
-                { name: "Team Player", icon: "🤝", desc: "+25% Collaboration" },
+                { name: "Team Player", icon: "🤝", desc: "+25% Teamwork" },
                 { name: "Problem Solver", icon: "🔍", desc: "+20% Debug Speed" }
               ].map((ability, index) => (
                 <motion.div
@@ -117,7 +117,7 @@ const Office: React.FC<OfficeProps> = ({ onNavigate }) => {
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
             {[
               { icon: "🖊️", name: "Sketch Book", desc: "For creative ideation", rarity: "Rare" },
-              { icon: "🎮", name: "Game Controller", desc: "Strategic Reflexes", rarity: "Epic" },
+              { icon: "🎮", name: "Game Gear", desc: "Strategic Reflexes", rarity: "Epic" },
               { icon: "📚", name: "Tech Blogs", desc: "Knowledge source", rarity: "Uncommon" },
               { icon: "☕", name: "Coffee", desc: "Energy boost", rarity: "Legendary" }
             ].map((item, index) => (
@@ -139,6 +139,10 @@ const Office: React.FC<OfficeProps> = ({ onNavigate }) => {
             ))}
           </div>
         </motion.div>
+      </div>
+
+      <div className="mt-12 text-center">
+        <p className="text-xs text-gray-400">© 2025 Naira Khosla. All rights reserved.</p>
       </div>
     </div>
   );

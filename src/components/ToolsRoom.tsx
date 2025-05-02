@@ -1,7 +1,7 @@
+import { motion } from 'framer-motion';
+import { Github } from 'lucide-react';
 import React, { useState } from 'react';
 import Modal from 'react-modal';
-import { motion } from 'framer-motion';
-import { Github, ExternalLink } from 'lucide-react';
 
 interface ToolsRoomProps {
   onNavigate: (room: string) => void;
@@ -69,15 +69,7 @@ const ToolsRoom: React.FC<ToolsRoomProps> = ({ onNavigate }) => {
                   >
                     <Github size={16} />
                   </a>
-                  <a 
-                    href={project.demo}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    onClick={(e) => e.stopPropagation()}
-                    className="hover:text-blue-400 transition-colors"
-                  >
-                    <ExternalLink size={16} />
-                  </a>
+                  
                 </div>
               </div>
               <p className="text-sm mb-4 text-gray-400">{project.description}</p>
@@ -93,6 +85,10 @@ const ToolsRoom: React.FC<ToolsRoomProps> = ({ onNavigate }) => {
               </div>
             </motion.div>
           ))}
+        </div>
+
+        <div className="mt-12 text-center">
+          <p className="text-xs text-gray-400">© 2025 Naira Khosla. All rights reserved.</p>
         </div>
       </div>
 
@@ -113,14 +109,7 @@ const ToolsRoom: React.FC<ToolsRoomProps> = ({ onNavigate }) => {
               >
                 <Github size={20} />
               </a>
-              <a 
-                href={selectedProject.demo}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="hover:text-blue-400 transition-colors"
-              >
-                <ExternalLink size={20} />
-              </a>
+              
             </div>
             
             <h2 className="text-xl mb-2 text-blue-400">{selectedProject.title}</h2>

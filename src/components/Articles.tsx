@@ -1,6 +1,6 @@
-import React from 'react';
 import { motion } from 'framer-motion';
 import { ExternalLink } from 'lucide-react';
+import React from 'react';
 
 interface ArticlesProps {
   onNavigate: (room: string) => void;
@@ -76,6 +76,10 @@ const Articles: React.FC<ArticlesProps> = ({ onNavigate }) => {
             ))}
           </div>
         </motion.div>
+      </div>
+
+      <div className="mt-12 text-center">
+        <p className="text-xs text-gray-400">© 2025 Naira Khosla. All rights reserved.</p>
       </div>
     </div>
   );

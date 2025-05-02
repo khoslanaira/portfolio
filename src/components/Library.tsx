@@ -1,5 +1,5 @@
-import React, { useState } from 'react';
 import { motion } from 'framer-motion';
+import React, { useState } from 'react';
 
 interface LibraryProps {
   onNavigate: (room: string) => void;
@@ -124,6 +124,10 @@ const Library: React.FC<LibraryProps> = ({ onNavigate }) => {
               aria-label={`Go to education item ${index + 1}`}
             />
           ))}
+        </div>
+
+        <div className="mt-12 text-center">
+          <p className="text-gray-400">© 2025 Naira Khosla. All rights reserved.</p>
         </div>
       </div>
     </div>

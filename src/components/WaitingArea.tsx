@@ -106,6 +106,9 @@ const WaitingArea: React.FC<WaitingAreaProps> = ({ onNavigate }) => {
             <Linkedin size={16} /> LinkedIn Profile
           </a>
         </div>
+        <div className="mt-12 text-center">
+          <p className="text-xs text-gray-400">© 2025 Naira Khosla. All rights reserved.</p>
+        </div>
       </div>
     </div>
   );
